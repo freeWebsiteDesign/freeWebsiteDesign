@@ -1,0 +1,446 @@
+/* definings */
+/* global styles */
+* {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.cntr {
+  display: block;
+  margin: 0 auto; }
+
+.crcl {
+  border-radius: 100%; }
+
+.ul {
+  text-align: center; }
+
+.li {
+  display: inline-block; }
+
+html {
+  height: 100%;
+  min-height: 100%; }
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+body {
+  position: relative; }
+
+/*
+*
+*  Project Start
+*
+*/
+.is-loading {
+  overflow: hidden; }
+
+#preloader.is-hidden {
+  visibility: hidden;
+  opacity: 0; }
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000000;
+  background-color: transparent;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  -webkit-perspective: 1000px;
+  -webkit-perspective-origin: 50% 50%; }
+  #preloader .preLeft,
+  #preloader .preRight {
+    position: absolute;
+    top: 0;
+    background-color: black;
+    height: 100%;
+    width: 50%; }
+  #preloader .preLeft {
+    left: 0; }
+  #preloader .preRight {
+    right: 0; }
+  #preloader .txt {
+    height: 70px;
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    line-height: 1; }
+    #preloader .txt .txt-perc {
+      font-family: monospace;
+      color: white;
+      font-size: 30px;
+      padding-bottom: 20px; }
+    #preloader .txt .progress {
+      width: 100%;
+      height: 3px;
+      display: block;
+      margin: 0 auto; }
+      #preloader .txt .progress span {
+        display: block;
+        width: 0;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8); }
+
+body {
+  background-color: #312d2d; }
+
+.freeWebsiteDesign {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  width: 250px;
+  font-family: "Inconsolata", monospace;
+  color: black;
+  opacity: 0.7; }
+  .freeWebsiteDesign:visited {
+    color: black; }
+  @media only screen and (max-width: 1000px) {
+    .freeWebsiteDesign {
+      bottom: 20px; } }
+
+#birdHolder {
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 200 !important; }
+
+#container {
+  height: 100%;
+  width: 100%;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  margin: auto;
+  overflow: hidden; }
+
+#shell {
+  background-color: #3B74A0;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  perspective: 700;
+  -webkit-perspective: 700;
+  -moz-perspective: 700px;
+  -ms-perspective: 700;
+  -o-perspective: 700;
+  perspective-origin: 50% 50%;
+  -webkit-perspective-origin: 50% 50%;
+  -moz-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  background: #1D2B64;
+  background: -webkit-linear-gradient(to top, #F8CDDA, #1D2B64);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #F8CDDA, #1D2B64);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow: scroll;
+  min-height: 845px !important; }
+  @media only screen and (max-width: 1000px) {
+    #shell .square {
+      height: 60% !important;
+      width: 80% !important; }
+      #shell .square .name {
+        top: -22% !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: auto !important;
+        bottom: auto !important;
+        height: 50px;
+        width: 100%;
+        font-size: 50px !important; }
+      #shell .square .about,
+      #shell .square .follow,
+      #shell .square .resume,
+      #shell .square .contact {
+        top: auto !important;
+        width: 40% !important;
+        font-size: 25px !important;
+        color: black !important;
+        line-height: 2; }
+      #shell .square .about {
+        right: auto !important;
+        left: 10% !important;
+        bottom: -15% !important;
+        text-align: right !important;
+        padding-right: 20px !important; }
+      #shell .square .follow {
+        right: auto !important;
+        left: 10% !important;
+        bottom: -25% !important;
+        text-align: right !important;
+        padding-right: 20px !important; }
+      #shell .square .resume {
+        left: auto !important;
+        right: 10% !important;
+        text-align: left !important;
+        bottom: -25% !important;
+        padding-left: 20px !important; }
+      #shell .square .contact {
+        left: auto !important;
+        right: 10% !important;
+        text-align: left !important;
+        bottom: -15% !important;
+        padding-left: 20px !important; }
+    #shell .centerBackground {
+      border: 10px solid #312d2d; }
+    #shell .freeTemplateDesign {
+      bottom: 10px !important; }
+    #shell .centerBackground {
+      top: 0 !important;
+      left: 0 !important;
+      height: 100% !important;
+      width: 100% !important; }
+    #shell .centerContent {
+      padding: 15px !important; }
+    #shell .contactContent {
+      overflow: scroll !important; }
+      #shell .contactContent .contactWords {
+        font-size: 20px !important;
+        display: block !important;
+        margin: 50px auto 0 auto !important;
+        height: auto !important;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important; }
+      #shell .contactContent .formHold {
+        display: block !important;
+        position: relative !important;
+        margin: 50px auto 50px auto !important;
+        height: auto !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important; }
+        #shell .contactContent .formHold #message {
+          height: 200px !important; } }
+  #shell .square {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 50vh;
+    width: 50vh; }
+  #shell .centerShell {
+    transform-origin: center center;
+    transform: rotateX(40deg);
+    perspective: 700;
+    -webkit-perspective: 700;
+    -moz-perspective: 700px;
+    -ms-perspective: 700;
+    -o-perspective: 700;
+    perspective-origin: 50% 50%;
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    -ms-perspective-origin: 50% 50%;
+    -o-perspective-origin: 50% 50%; }
+  #shell .centerContent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    z-index: 100;
+    perspective: 700;
+    -webkit-perspective: 700px;
+    -moz-perspective: 700px;
+    -ms-perspective: 700px;
+    -o-perspective: 700px; }
+    #shell .centerContent .centerImg {
+      height: 100%;
+      width: 100%;
+      background-image: url("../img/man.jpg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    #shell .centerContent .name {
+      opacity: 0;
+      position: absolute;
+      bottom: 30px;
+      left: -200px;
+      font-size: 3vw;
+      font-weight: normal;
+      color: white;
+      text-align: center;
+      letter-spacing: 2px;
+      font-family: 'Cormorant Garamond', serif;
+      z-index: 500; }
+    #shell .centerContent .pageLink {
+      width: 150px;
+      color: white;
+      font-family: "Inconsolata", monospace;
+      position: absolute;
+      right: -200px;
+      font-size: 30px;
+      opacity: 0; }
+      #shell .centerContent .pageLink:hover {
+        cursor: pointer !important;
+        color: black; }
+    #shell .centerContent .about {
+      top: -1.5vh; }
+    #shell .centerContent .follow {
+      top: 30%; }
+    #shell .centerContent .resume {
+      bottom: 30%; }
+    #shell .centerContent .contact {
+      bottom: -1.5vh; }
+  #shell .centerBackground {
+    position: absolute;
+    top: -2.5%;
+    left: -2.5%;
+    border: 20px solid #312d2d;
+    background-color: transparent;
+    height: 105%;
+    width: 105%;
+    opacity: 0; }
+  #shell .centerImg {
+    padding: 40px !important; }
+  #shell .linkContent {
+    pointer-events: all; }
+    #shell .linkContent .aboutContent {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
+      padding: 4%;
+      z-index: 50;
+      opacity: 0;
+      pointer-events: none; }
+      #shell .linkContent .aboutContent p {
+        padding-bottom: 20px;
+        color: white;
+        font-family: "Inconsolata", monospace;
+        font-size: 25px; }
+        @media only screen and (max-width: 500px) {
+          #shell .linkContent .aboutContent p {
+            font-size: 20px !important; } }
+    #shell .linkContent .followContent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0; }
+      #shell .linkContent .followContent .social {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        height: 250px;
+        width: 200px; }
+      #shell .linkContent .followContent .socialIcons {
+        padding: 20px;
+        opacity: 0; }
+        #shell .linkContent .followContent .socialIcons a {
+          font-size: 5vh;
+          color: white; }
+          @media only screen and (max-width: 1300px) {
+            #shell .linkContent .followContent .socialIcons a {
+              font-size: 40px; } }
+    #shell .linkContent .contactContent {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-height: 590px;
+      opacity: 0;
+      pointer-events: none; }
+      #shell .linkContent .contactContent .contactWords {
+        position: absolute;
+        top: 4vh;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 70%;
+        font-family: "Inconsolata", monospace;
+        color: white;
+        font-size: 2vh; }
+      #shell .linkContent .contactContent .formHold {
+        height: 65%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 2vh;
+        margin: auto; }
+        #shell .linkContent .contactContent .formHold .title {
+          text-align: center;
+          color: black;
+          font-family: "Inconsolata", monospace; }
+      #shell .linkContent .contactContent form #name,
+      #shell .linkContent .contactContent form #email {
+        padding: 10px 0; }
+      #shell .linkContent .contactContent form #name,
+      #shell .linkContent .contactContent form #email,
+      #shell .linkContent .contactContent form #message {
+        width: 70%;
+        border: 2px solid white;
+        background-color: transparent;
+        color: white;
+        text-align: center;
+        display: block;
+        margin: 10px auto 0 auto;
+        font-family: "Inconsolata", monospace; }
+        #shell .linkContent .contactContent form #name:focus,
+        #shell .linkContent .contactContent form #email:focus,
+        #shell .linkContent .contactContent form #message:focus {
+          outline: 0; }
+      #shell .linkContent .contactContent form #message {
+        height: 15vh;
+        padding: 10px; }
+      #shell .linkContent .contactContent form button {
+        height: 40px;
+        width: 100px;
+        border: none;
+        background-color: #bdffc3;
+        color: black;
+        display: block;
+        margin: 10px auto 0 auto;
+        font-family: "Inconsolata", monospace; }
+        #shell .linkContent .contactContent form button:focus {
+          outline: 0; }
+        #shell .linkContent .contactContent form button:hover {
+          cursor: pointer; }
+      #shell .linkContent .contactContent form ::-webkit-input-placeholder {
+        color: white;
+        opacity: 1 !important; }
+      #shell .linkContent .contactContent form :-moz-placeholder {
+        color: white;
+        opacity: 1 !important; }
+      #shell .linkContent .contactContent form ::-moz-placeholder {
+        color: white;
+        opacity: 1 !important; }
+      #shell .linkContent .contactContent form :-ms-input-placeholder {
+        color: white;
+        opacity: 1 !important; }
+
+/*Page Specifics*/
+
+/*# sourceMappingURL=main.css.map */

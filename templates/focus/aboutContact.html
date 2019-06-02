@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About + Contact: Focus: freeWebsite.Design</title>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <link type="text/css" rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="scss/main.css">
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  </head>
+
+  <body class="aboutContactPage">
+    <section id="shell">
+
+      <h1 class="name">
+        <a href="index.html">MyBig Name</a>
+      </h1>
+
+      <div class="aboutContact rightTarget">
+        <a href="aboutContact.html">
+          <p>About</p>
+          <p>+</p>
+          <p>Contact</p>
+        </a>
+      </div>
+
+      <ul class="links rightTarget">
+        <li><a href="pageLinks/gallery2.html">Gallery 2</a></li>
+        <li><a href="#">Gallery 1</a></li>
+      </ul>
+
+      <ul class="ul social rightTarget">
+        <li class="li"><a href="#"><p>Facebook</p></a></li>
+        <li class="li"><a href="#"><p>Instagram</p></a></li>
+      </ul>
+
+      <div class="contactLeft">
+        <div class="image"></div>
+      </div>
+
+      <div class="contactRight">
+        <div class="contactText">
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic
+            country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about
+            the blind texts it is an almost unorthographic life.</p>
+        </div>
+        <!-- Replace the line on 54 with the line on 53 for the contact section to work-->
+        <!-- <form action="<http://formspree.io/youremail@provider.com" method="POST" class="cntr">-->
+        <form action="" method="POST">
+          <input name="contactPageName" type="text" id="name" placeholder="Name"/>
+          <input name="email" type="email" id="email" placeholder="Email"/>
+          <!-- temporary comment,  (This is a honeypot to catch webscrapers) -->
+    			<input type="hidden" name="_next" value="responce.html" />
+          <input type="text" name="_gotcha" style="display:none;" />
+          <label for="message"></label>
+          <textarea class="cntr" id="message" name="message" placeholder="Message" Required></textarea>
+          <button class="cntr" type="submit">Submit</button>
+        </form>
+      </div>
+      <p><a href="https://freeWebsite.Design" class="freeWebsiteDesign">freeWebsite.Design</a></p>
+    </section><!-- end shell -->
+  </body>
+</html>

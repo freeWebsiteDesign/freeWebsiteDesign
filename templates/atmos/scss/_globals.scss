@@ -1,0 +1,574 @@
+*{
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0 ;
+  padding: 0 ;
+  box-sizing: border-box;
+}
+.cntr{
+  display: block;
+  margin: 0 auto;
+}
+.crcl{
+  border-radius: 100%;
+}
+.ul{
+  text-align: center;
+}
+.li{
+  display: inline-block;
+}
+html{
+	height: 100%;
+	min-height: 100%;
+}
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+body{
+  position: relative;
+}
+
+/*
+*
+*  Project Start
+*
+*/
+
+  .is-loading{
+    overflow: hidden;
+  }
+
+  #preloader.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  #preloader{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000000;
+    background-color: transparent;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    -webkit-perspective: 1000px;
+    -webkit-perspective-origin: 50% 50%;
+
+    .preLeft,
+    .preRight{
+      position: absolute;
+      top:0;
+      background-color: black;
+      height: 100%;
+      width: 50%
+    }
+
+    .preLeft{
+      left:0;
+    }
+
+    .preRight{
+      right:0;
+    }
+
+    .txt{
+      height:70px;
+      width: 150px;
+      //border: 1px solid white;
+      position: absolute;
+      top:0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      text-align: center;
+      line-height: 1;
+
+      .txt-perc{
+        font-family: monospace;
+        color: white;
+        font-size: 30px;
+        padding-bottom: 20px;
+      }
+
+      .progress{
+        width: 100%;
+        height: 3px;
+        display: block;
+        margin: 0 auto;
+
+        span{
+          display: block;
+          width: 0;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }//end txt
+  }//end preloader
+
+body{
+  background-color: #312d2d;
+}
+
+.freeWebsiteDesign{
+  position: absolute;
+  bottom:40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  //border: 1px solid black;
+  text-align: center;
+  width: 250px;
+  font-family: $incon;
+  color: black;
+  opacity:0.7;
+
+  &:visited{
+    color: black;
+  }
+
+  @media only screen and (max-width: 1000px){
+      bottom:20px;
+  }//end 1000px
+}//end built by
+
+#birdHolder{
+  //border: 20px solid lime;
+  opacity:0.9;
+  pointer-events: none;
+  z-index: 200 !important;
+}
+
+#container{
+  height:100%;
+  width: 100%;
+  //border: 10px solid tomato;
+  position: absolute !important;
+  top:0;
+  left:0;
+  margin: auto;
+  overflow: hidden;
+}
+
+#shell{
+  background-color: #3B74A0;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  perspective: 700 ;
+  -webkit-perspective: 700;
+  -moz-perspective: 700px;
+  -ms-perspective: 700;
+  -o-perspective: 700;
+  perspective-origin: 50% 50%;
+  -webkit-perspective-origin: 50% 50%;
+  -moz-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  background: #1D2B64;
+  background: -webkit-linear-gradient(to top, #F8CDDA, #1D2B64);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #F8CDDA, #1D2B64); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow: scroll;
+  min-height: 845px !important;
+
+  @media only screen and (max-width: 1000px){
+    .square{
+      height: 60% !important;
+      width: 80% !important;
+      //border: 5px solid firebrick;
+
+      .name{
+        top:-22% !important;
+        left:0 !important;
+        right: 0 !important;
+        margin: auto !important;
+        bottom: auto !important;
+        //border: 1px solid white;
+        height: 50px;
+        width: 100%;
+        font-size: 50px !important;
+      }
+
+      .about,
+      .follow,
+      .resume,
+      .contact{
+        top: auto !important;
+        //border: 1px solid white !important;
+        width: 40% !important;
+        font-size: 25px !important;
+        color: black !important;
+        line-height: 2;
+      }
+
+      .about{
+        right: auto !important;
+        left:10% !important;
+        bottom:-15% !important;
+        text-align: right !important;
+        padding-right: 20px !important;
+
+      }
+
+      .follow{
+        right: auto !important;
+        left:10% !important;
+        bottom:-25% !important;
+        text-align: right !important;
+        padding-right: 20px !important;
+      }
+
+      .resume{
+        left:auto !important;
+        right: 10% !important;
+        text-align: left !important;
+        bottom:-25% !important;
+        padding-left: 20px !important;
+      }
+
+      .contact{
+        left:auto !important;
+        right: 10% !important;
+        text-align: left !important;
+        bottom:-15% !important;
+        padding-left: 20px !important;
+      }
+    }//end square
+    .centerBackground{
+      border: 10px solid #312d2d;
+    }
+
+    .freeTemplateDesign{
+      bottom: 10px !important;
+    }
+
+    .centerBackground{
+      top:0 !important;
+      left:0 !important;
+      height: 100% !important;
+      width: 100% !important;
+    }
+
+    .centerContent{
+      padding: 15px !important;
+    }
+
+    .contactContent{
+      //border: 2px solid tomato !important;
+      overflow: scroll !important;
+
+      .contactWords{
+        font-size: 20px !important;
+        display: block !important;
+        margin: 50px auto 0 auto !important;
+        height: auto !important;
+        //border: 1px solid lime !important;
+        position: relative !important;
+        top:auto !important;
+        left: auto !important;
+        right: auto !important;
+      }
+
+      .formHold{
+        display: block !important;
+        position: relative !important;
+        margin: 50px auto 50px auto !important;
+        //border: 1px solid yellow !important;
+        height: auto !important;
+        top:auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        #message{
+          height: 200px !important;
+        }
+      }
+    }
+  }//end 1000px
+
+  .square{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    height: 50vh;
+    width: 50vh;
+  }
+
+  .centerShell{
+    transform-origin: center center;
+    transform:rotateX(40deg);
+    //border: 10px solid lightblue;
+    perspective: 700 ;
+    -webkit-perspective: 700;
+    -moz-perspective: 700px;
+    -ms-perspective: 700;
+    -o-perspective: 700;
+    perspective-origin: 50% 50%;
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    -ms-perspective-origin: 50% 50%;
+    -o-perspective-origin: 50% 50%;
+  }//end centerShell
+
+  .centerContent{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    //border: 3px solid lime;
+    z-index: 100;
+    perspective: 700;
+    -webkit-perspective: 700px;
+    -moz-perspective: 700px;
+    -ms-perspective: 700px;
+    -o-perspective: 700px;
+
+    .centerImg{
+      height: 100%;
+      width: 100%;
+      background-image: url("../img/man.jpg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .name{
+      //dont change opacity:0
+      opacity: 0;
+      position: absolute;
+      bottom:30px;
+      left:-200px;
+      font-size:3vw;
+      font-weight: normal;
+      color: white;
+      text-align: center;
+      letter-spacing: 2px;
+      font-family: 'Cormorant Garamond', serif;
+      z-index: 500;
+    }//end name
+
+      .pageLink{
+        width: 150px;
+        color: white;
+        font-family: $incon;
+        position: absolute;
+        right:-200px;
+        //border: 2px solid white;
+        font-size: 30px;
+        //dont change opacity:0
+        opacity:0;
+
+        &:hover{
+          cursor: pointer !important;
+          color: black;
+        }
+      }//end pageLink
+
+      .about{top:-1.5vh;}
+      .follow{top:30%;}
+      .resume{bottom:30%;}
+      .contact{bottom:-1.5vh;}
+  }//end centercontent
+
+  .centerBackground{
+    position: absolute;
+    top:-2.5%;
+    left:-2.5%;
+    border: 20px solid #312d2d;
+    background-color: transparent;
+    height: 105%;
+    width: 105%;
+    //dont change opcity 0
+    opacity: 0;
+  }
+  .centerImg{
+    padding: 40px !important;
+  }
+
+  .linkContent{
+    pointer-events: all;
+    //border: 2px solid purple;
+
+    .aboutContent{
+      position: relative;
+      height: 100%;
+      width: 100%;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
+      padding: 4%;
+      z-index: 50;
+      //border: 5px solid lime;
+      //do not change opacity:0
+      opacity: 0;
+      pointer-events: none;
+
+      p{
+        padding-bottom: 20px;
+        color: white;
+        font-family: $incon;
+        font-size: 25px;
+
+        @media only screen and (max-width: 500px){
+          font-size: 20px !important;
+        }
+      }
+    }//end aboutContent
+    .followContent{
+      position: absolute;
+      top:0;
+      left: 0;
+      //do not change opacity:0
+      //border: 5px solid tomato;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      .social{
+        //border: 1px solid white;
+        position: absolute;
+        top:0;
+        left: 0;
+        right:0;
+        bottom:0;
+        margin: auto;
+        height: 250px;
+        width: 200px;
+      }
+      .socialIcons{
+        padding: 20px;
+        //do not change opacity:0
+        opacity: 0;
+
+        a{
+          font-size: 5vh;
+          color: white;
+
+          @media only screen and (max-width: 1300px){
+            //font-size: 5vw;
+            font-size: 40px;
+          }
+        }
+      }
+    }//end followcontent
+      .contactContent{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+        max-height: 590px;
+        opacity: 0;
+        pointer-events: none;
+
+        .contactWords{
+          position: absolute;
+          top:4vh;
+          left:0;
+          right: 0;
+          margin: auto;
+          width: 70%;
+          //border: 1px solid lightblue;
+          font-family: $incon;
+          color: white;
+          font-size: 2vh;
+        }
+          .formHold{
+            //border: 1px solid tomato;
+            height: 65%;
+            width: 100%;
+            position: absolute;
+            left:0;
+            right:0;
+            bottom:2vh;
+            margin:auto;
+
+            .title{
+              text-align: center;
+              color: black;
+              font-family: $incon;
+            }
+          }//end formHold
+
+          form{
+          //  border: 1px solid white;
+            #name,
+            #email{
+              padding: 10px 0;
+            }
+            #name,
+            #email,
+            #message{
+              width: 70%;
+              border: 2px solid white;
+              background-color: transparent;
+              color: white;
+              text-align: center;
+              display: block;
+              margin: 10px auto 0 auto;
+              font-family: $incon;
+
+              &:focus{
+                outline:0;
+              }
+            }
+
+            #message{
+              height: 15vh;
+              padding: 10px;
+            }
+
+            button{
+              height: 40px;
+              width: 100px;
+              border:none;
+              //border: 2px solid black;;
+              background-color: #bdffc3;
+              color: black;
+              display: block;
+              margin: 10px auto 0 auto;
+              font-family: $incon;
+              &:focus{
+                outline:0;
+              }
+              &:hover{
+                cursor: pointer;
+              }
+            }
+            ::-webkit-input-placeholder {
+               color: white ;
+               opacity: 1 !important;
+            }
+
+            :-moz-placeholder { // Firefox 18-
+               color: white ;
+               opacity: 1 !important;
+            }
+
+            ::-moz-placeholder {  // Firefox 19+
+               color: white ;
+               opacity: 1 !important;
+            }
+
+            :-ms-input-placeholder {
+               color: white ;
+               opacity: 1 !important;
+            }
+          }//end form
+        }//end contactContent
+  }//end linkContent
+}//end shell

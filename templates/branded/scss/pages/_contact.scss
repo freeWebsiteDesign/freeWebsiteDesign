@@ -1,0 +1,208 @@
+.contactPage{
+  @media only screen and (max-width: 1000px){
+    .contactContent{
+      //border: 2px solid yellow !important;
+      position: relative !important;
+      top:auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      width: 80% !important;
+      height: 750px !important;
+    }//end contactcontent
+
+    .contactTile,
+    form,
+    .contactWords{
+      display: block !important;
+    }
+
+    .contactTile{
+      margin: 0 auto !important;
+      padding:100px 0 50px 0 !important;
+      text-align: center !important;
+      transform: translateX(0) !important;
+      border-bottom: none !important;
+    }
+
+    .contactWords{
+      //border: 1px solid white;
+      position: relative !important;
+      top:auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      width: 100% !important;
+    }
+
+    form{
+      width: 100% !important;
+    }
+
+    button{
+      bottom:auto !important;
+      left:auto !important;
+      right:auto !important;
+      display: block !important;
+      margin: -3px auto 0 auto !important;
+      position: relative !important;
+    }
+
+    #email{
+      border-right: 3px solid black !important;
+      padding-top:10px !important;
+    }
+
+    #name,
+    #email{
+      padding-bottom: 10px !important;
+    }
+
+    #name,
+    #email,
+    #message{
+      font-size: 20px !important;
+      text-align: center !important;
+      padding-left: 0 !important;
+    }
+  }//end 1000px
+
+.contactContent{
+  display: block;
+  //border: 5px solid tomato;
+  height: 450px;
+  width: 700px;
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+.contactTile{
+  display: inline-block;
+  font-family: $incon;
+  color: black;
+  font-size: 60px;
+  border-bottom: 3px solid black;
+  padding-right: 15px;
+  //border: 1px solid black;
+  margin-bottom: 50px;
+  transform: translateX(5px);
+}
+  form{
+    height: 300px;
+    width: 400px;
+    //border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 31px;
+    z-index: 100 !important;
+    position: relative;
+
+    #name,
+    #email,
+    #message{
+      display: block;
+      width: 100%;
+      background-color: transparent;
+      font-size: 30px;
+      border-bottom: 3px solid black;
+      font-family:$incon;
+      padding-top: 20px;
+      padding-left: 20px;
+      border-top: none;
+    }
+
+    #name{
+      border-right: none;
+      border-left: none;
+      margin-top: -16px;
+    }
+
+    #email{
+      border-right: none;
+      border-left: 3px solid black;
+    }
+
+    #message{
+      border-right: 3px solid black;
+      border-left: 3px solid black;
+      height: 200px;
+      line-height: 1;
+    }
+
+    button{
+      padding: 10px 20px;
+      background-color: transparent;
+      position: absolute;
+      bottom:-70px;
+      right: 0;
+      border: 3px solid black;
+      font-family: $incon;
+      color: black;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }//end button
+
+    #name,
+    #email,
+    #message,
+    button{
+      &:focus{
+        outline:0;
+      }
+    }
+
+    ::-webkit-input-placeholder {
+       color: black !important;
+    }
+
+    :-moz-placeholder { // Firefox 18-
+       color: black !important;
+    }
+
+    ::-moz-placeholder {  // Firefox 19+
+       color: black !important;
+    }
+
+    :-ms-input-placeholder {
+       color: black !important;
+    }
+  }//end form
+
+    .contactWords{
+      position: absolute;
+      top:95px;
+      left: 5px;
+      color: #4e0000;
+      //border: 1px solid white;
+      font-family: $incon;
+      width: 200px;
+      font-size: 20px;
+      text-align: justify;
+    }//end contactWords
+  }//end contactContent
+
+  .logo{
+    font-size: 50px !important;
+    letter-spacing: 5px !important;
+  }
+
+  .freeWebsiteDesign{
+    bottom:2vw !important;
+    right: 7vw !important;
+    left: auto !important;
+  }
+
+  .bigLine{
+    width: 500px;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+    top:500px;
+    left: 500px;
+  }//end bigline
+}//end aboutPage

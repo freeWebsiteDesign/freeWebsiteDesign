@@ -1,0 +1,390 @@
+*{
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0 ;
+  padding: 0 ;
+  box-sizing: border-box;
+}
+
+.ul{
+  text-align: center;
+}
+
+.li{
+  display: inline-block;
+}
+
+html{
+	height: 100%;
+	min-height: 100%;
+}
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+body{
+  position: relative;
+}
+
+/*
+*
+*  Project Start
+*
+*/
+
+.zIndexUp{
+  z-index: 1000000 !important;
+}
+
+.is-loading{
+  overflow: hidden;
+}
+
+#preloader.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#preloader{
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 29999;
+  background-color: transparent;
+
+  .txt{
+    height:70px;
+    width: 150px;
+    //border: 1px solid white;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    line-height: 1;
+    z-index: 30001;
+
+    .txt-perc{
+      font-family: monospace;
+      color: black;
+      font-size: 30px;
+      padding-bottom: 20px;
+    }
+
+    .progress{
+      width: 100%;
+      height: 3px;
+      display: block;
+      margin: 0 auto;
+
+      span{
+        display: block;
+        width: 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+  }//end txt
+
+  .loadPanel{
+    position: absolute;
+    top:0;
+    height: 100vh;
+    width: 10%;
+    z-index: 3000;
+  }
+
+  .p1{
+    left:0;
+    background-color: #EACFB2;
+  }
+  .p2{
+    left:10%;
+    background-color: #E2C8AC;
+  }
+  .p3{
+    left:20%;
+    background-color: #DBC1A6;
+  }
+  .p4{
+    left:30%;
+    background-color: #D3BBA0;
+  }
+  .p5{
+    left:40%;
+    width: 11% !important;
+    background-color: #CCB59B;
+  }
+  .p6{
+    left:50%;
+    background-color: #C4AE95;
+  }
+  .p7{
+    left:60%;
+    background-color: #BCA78F;
+  }
+  .p8{
+    left:70%;
+    background-color: #B5A089;
+  }
+  .p9{
+    left:80%;
+    background-color: #AD9983;
+  }
+  .p10{
+    left:90%;
+    background-color: #A5927D;
+  }
+}//end preloader
+
+.menuContent{
+  height: 100vh;
+  width: 100vw;
+  background-color: #cafff3;
+  opacity: 0;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 200;
+}
+
+body,
+#shell{
+  background-color: $background;
+}
+
+.freeWebsiteDesign{
+  position: fixed;
+  margin: 0 !important;
+  padding:0 !important;
+  font-size: 15px;
+  z-index: 10;
+  bottom:3vw;
+  right:7vw;
+  text-align: left;
+  font-family: $incon;
+  &:hover{
+    a{
+      color: white;
+    }
+  }
+
+  a{
+    color: inherit;
+    //border: 1px solid lime;
+    padding: 5px;
+    color: black;
+    &:visited{
+      color: black;
+    }
+  }
+}//end freeWebsiteDesign
+
+#shell{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  min-height: 736px;
+  @media only screen and (max-width: 500px){
+    .linksHolder{
+      width: 100% !important;
+      //border: 3px solid tomato !important;
+      padding: 70px 30px 100px 30px !important;
+    }
+    .brandItem{
+      font-size: 25px !important;
+    }
+  }//end 500px
+
+  @media only screen and (max-width: 1000px){
+    .linksHolder {
+      padding-top: 20%;
+      height: auto !important;
+      ul{
+        text-align: center !important;
+        text-align-last: center !important;
+      }
+    }
+
+    .freeWebsiteDesign,
+    .linksHolder,
+    .pageNav,
+    .social,
+    .logo{
+      position: relative !important;
+      display: block !important;
+      margin: 0 auto !important;
+      top:auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      margin: 0 auto !important;
+      //border: 2px solid black !important;
+    }
+
+    .pageNav,
+    .social,
+    .logo,
+    .freeWebsiteDesign{
+      text-align: center !important;
+    }
+
+    .pageNav{
+      padding-top: 10% !important;
+    }
+    .freeWebsiteDesign{
+      padding-top: 5% !important;
+      padding-bottom: 30px !important;
+    }
+
+    .logo,
+    .social{
+      padding-top: 2% !important;
+    }
+  }//end 1000px
+
+
+  .logo{
+    text-align: left;
+    padding: 0;
+    margin:0;
+    font-size: 50px;
+    position: absolute;
+    bottom:7vw;
+    left:7vw;
+    z-index: 30;
+    font-size: 15vw;
+    font-weight: lighter;
+    line-height: 1;
+    font-family: arial;
+    letter-spacing: 1vw;
+    z-index: 11;
+
+    &:hover{
+      a{
+        color: $logoHover !important;
+      }
+    }
+
+    h1{
+      visibility: hidden;
+    }
+
+    a{
+      color: $logo;
+      display: block;
+      &:visited{
+        color: $logo;
+      }
+    }
+  }//end logo
+
+  .pageNav{
+      position: absolute;
+      top:7vw;
+      left: 7vw;
+      font-family: $incon;
+      font-size: 20px;
+      z-index: 11;
+
+      a{
+        color: $navItem;
+        &:visited{
+          color: $navItem;
+        }
+        &:hover{
+          color: $navItemHover;
+        }
+      }
+  }//end pagenav
+
+  .social{
+    position: absolute;
+    bottom:7vw;
+    right: 7vw;
+    text-align: right ;
+    z-index: 11;
+    font-size: 20px;
+    li{
+      //border: 1px solid black;
+      font-family: $incon;
+      letter-spacing: 3px;
+      display:block !important;
+    }
+
+    a{
+      color: $navItem;
+      &:visited{
+        color: $navItem;
+      }
+      &:hover{
+        cursor: pointer;
+        color: $navItemHover;
+
+      }
+    }//end a
+  }//end social
+
+  .linksHolder{
+    position: absolute;
+    top:7vw;
+    right: 7vw;
+    height: 350px;
+    width: 450px;
+    //border: 1px solid black;
+    z-index: 20;
+
+    ul{
+      text-align: right;
+      text-align-last: left;
+
+      .brandItem{
+        font-family: $incon;
+        font-size: 35px;
+        letter-spacing: 5px;
+
+        a{
+          color: black;
+          padding: 0 10px;
+        }
+      }//end li
+    }//end ul
+  }//end linksHolder
+
+  .backgroundImages{
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    text-align: center;
+
+    .image{
+      opacity: 0;
+      z-index: 15 !important;
+      width: auto;
+      height: auto;
+      max-height: 100%;
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      margin: auto;
+      max-width: 80vw;
+      -webkit-box-shadow: 0px 3px 34px -13px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 3px 34px -13px rgba(0,0,0,0.75);
+      box-shadow: 0px 3px 34px -13px rgba(0,0,0,0.75);
+    }//end image
+  }//end backgroundImages
+}//end shell

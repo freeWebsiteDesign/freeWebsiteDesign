@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact: Branded: freeWebsite.Design</title>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <link type="text/css" rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="scss/main.css">
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  </head>
+  <body class="contactPage">
+    <section id="shell">
+      <div class="contactContent">
+        <p class="contactTile">Contact</p>
+        <p class="contactWords">Here is a little section for text if you would like to include some.
+        Just make sure not to put too much more that what you see here or it will look off on full size desktops!</p>
+        <!-- Replace the line on 26 with the line on 25 for the contact section to work-->
+        <!-- <form action="<http://formspree.io/youremail@provider.com" method="POST" class="cntr">-->
+        <form action="" method="POST" class="cntr">
+          <input name="contactPageName" type="text" id="name" placeholder="Name"/>
+          <input name="email" type="email" id="email" placeholder="Email"/>
+          <!-- temporary comment,  (This is a honeypot to catch webscrapers) -->
+    			<input type="hidden" name="_next" value="responce.html" />
+          <input type="text" name="_gotcha" style="display:none;" />
+          <label for="message"></label>
+          <textarea class="cntr" id="message" name="message" placeholder="Message" Required></textarea>
+          <button class="cntr" type="submit">Submit</button>
+        </form>
+      </div>
+
+      <ul class="pageNav">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <ul class="ul social">
+        <li class="li"><a href="#">Instagram<p></p></a></li>
+        <li class="li"><a href="#">Twitter<p></p></a></li>
+        <li class="li"><a href="#">Facebook<p></p></a></li>
+        <li class="li"><a href="#">Medium<p></p></a></li>
+      </ul>
+
+      <h1 class="logo">
+        <a href="index.html">Sajaan</a>
+        <a href="index.html">Matharu</a>
+      </h1>
+
+      <h1 class="freeWebsiteDesign"><a href="https://freeWebsite.Design">freeWebsite.Design</a></h1>
+    </section><!-- end shell -->
+  </body>
+  <script type="text/javascript" src="js/jsFiles.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</html>

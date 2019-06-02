@@ -1,0 +1,434 @@
+//starter css
+*{
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0 ;
+  padding: 0 ;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.ul{
+  text-align: center;
+}
+
+.li{
+  display: inline-block;
+}
+
+html{
+	height: 100%;
+	min-height: 100%;
+}
+
+body{
+  position: relative;
+  background-color: black;
+}
+
+  /*
+  *
+  *  Project Start
+  *
+  */
+
+  .is-loading{
+    overflow: hidden;
+  }
+
+  #preloader.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  #preloader{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000000;
+    background-color: #00355f;
+
+    .txt{
+      height:70px;
+      width: 150px;
+      //border: 1px solid white;
+      position: absolute;
+      top:0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      text-align: center;
+      line-height: 1;
+
+      .txt-perc{
+        font-family: monospace;
+        color: white;
+        font-size: 30px;
+        padding-bottom: 20px;
+      }
+
+      .progress{
+        width: 100%;
+        height: 3px;
+        display: block;
+        margin: 0 auto;
+        span{
+          display: block;
+          width: 0;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }//end txt
+  }//end preloader
+
+  #shell{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background-color: $blue;
+    min-height: 500px;
+
+  .freeTemplate{
+    z-index: 200;
+    position: fixed;
+    bottom:30px;
+    right:30px;
+    font-size: 17px;
+    font-family: $incon;
+    text-align: right;
+    opacity: 0.5;
+
+    @media only screen and (max-width: 750px){
+      font-size: 15px;
+    }//end 750px
+
+    a{
+      color: white;
+    }
+  }//end freeTemplate
+
+  .social{
+    //border: 10px solid white;
+    height: 100%;
+    width: 50%;
+    position: relative;
+    background-color: $socialBackgroundColor;
+    opacity:0;
+    visibility: hidden;
+
+    @media screen and (max-width: 975px){
+      width: 100%;
+    }
+
+    .followX{
+      position: absolute;
+      bottom:10%;
+      right:0;
+      left: 0;
+      margin: auto;
+      font-size: 30px;
+      //border: 1px solid black;
+      font-family: $open;
+      text-align: center;
+      z-index: 25;
+      color: white;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }//end followX
+
+    .socialIconHolder{
+      //border: 1px solid white;
+      position: absolute;
+      top:0;
+      right:0;
+      left:0;
+      bottom:0;
+      margin: auto;
+      height: 380px;
+      width: 300px;
+
+      @media only screen and (max-width: 750px){
+        width: 150px;
+        height: 150px;
+
+        .socialIcons{
+          font-size: 40px !important;
+        }
+      }//end 575px
+
+      .socialIcons{
+        //border: 1px solid tomato;
+        padding: 10px;
+        font-size: 80px;
+      }//end soc4ialIcons
+
+      a{
+        //border: 1px solid white;
+        color: white;
+      }//end a
+    }//end socialIconHolder
+  }//end social
+
+  .left{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    z-index:21;
+    width: 50%;
+
+    @media screen and (max-width: 975px){
+      display: none !important;
+    }
+
+    .leftImg{
+      position: absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+      margin: auto;
+      z-index: 20;
+      background-image: url("../img/5Compressed.jpg");
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }//end leftImg
+  }//end Left
+
+  .right{
+    position: absolute;
+    top:0;
+    right:0;
+    height: 100%;
+    width: 50%;
+    //border: 2px solid beige;
+    background-color: #E0D2C3;
+    perspective: 1000px;
+    perspective-origin: bottom;
+    background-image: url("../img/mountainsCompressed.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index:20;
+
+    @media screen and (max-width: 975px){
+      width: 100% !important;
+  }
+    .aboutX{
+      position: absolute;
+      top:40px;
+      right:40px;
+      height: 30px;
+      width: 30px;
+      line-height: 1;
+      font-size: 30px;
+      //border: 1px solid black;
+      text-align: center;
+      z-index: 25;
+      font-family: $open;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }//end contactX
+
+    .rightImg{
+      display: none;
+      height: 100%;
+      width:100%;
+      background-image: url("../img/5Compressed.jpg");
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform-origin:center bottom;
+    }//end rightImg
+
+    .aboutMe{
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      margin: auto;
+      height: 70%;
+      width:  70%;
+      //border: 1px solid black;
+      overflow:scroll;
+      //dont change opacity & visibility, its for the startup animation
+      opacity:0;
+      visibility: hidden;
+      padding-top: 30px;
+
+      .aboutMeTitle{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 60px;
+        font-family: $forum;
+        color: $aboutMeTitleColor;
+
+        @media only screen and (max-width: 975px){
+          font-size: 40px;
+          //border: 1px solid tomato;
+        }
+
+      }//end aboutMeTitle
+
+      .aboutMeWords{
+        height: 100%;
+        font-size: 25px;
+        line-height: 1.3;
+        //border: 1px solid white;
+        padding-top: 40px;
+        display: block;
+        margin: 0 auto;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        font-family: $open;
+        color: $aboutMeWordsColor;
+
+        @media only screen and (max-width: 975px){
+          font-size: 20px;
+          line-height: 1.1;
+          //border: 1px solid tomato;
+        }
+
+        p{
+          padding-bottom: 20px;
+        }
+      }
+    }//end aboutMe
+
+    .rightHolder{
+      transform-origin:center bottom;
+      //border: 10px solid black;
+      height: 100%;
+      width: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media screen and (max-width: 975px){
+        background-image: url("../img/5Compressed.jpg");
+      }
+      @media screen and (min-width: 976px){
+        background-image: url("../img/blueGradientCompressed.jpg");
+      }
+    }//end rightHolder
+
+    .textHold{
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      margin: auto;
+      height: 200px;
+      width: 300px;
+      //border: 2px solid yellow;
+
+      @media only screen and (max-width: 500px){
+        width: 200px;
+        .name{
+          font-size: 50px !important;
+        }
+        .topLeft{
+          top:-30px !important;
+          left:-100px !important;
+        }
+        .bottomRight{
+          bottom:-30px !important;
+          right: -10px !important;
+        }
+      }//end 500px
+
+      .name,
+      .topLeft,
+      .bottomRight{
+        //dont change opacity, its for the startup animation
+        opacity:0;
+      }
+
+      .name{
+        font-size: 80px;
+        //border: 2px solid white;
+        font-family: $forum;
+        color: beige;
+      }//end Name
+
+      .topLeft,
+      .bottomRight{
+        position: absolute;
+        //border: 1px solid white;
+        font-family: $open;
+      }
+
+      .topLeft{
+        top:-30px;
+        left:-120px;
+        transform: rotate(-90deg);
+        font-size: 22px;
+        color: $topLeftColor;
+        letter-spacing: 5px
+      }//end topLeft
+
+      .bottomRight{
+        //border: 1px solid white;
+        bottom:-80px;
+        right:-20px;
+        width: 15px;
+        word-break: break-all;
+        text-align: center;
+        letter-spacing: -2px;
+        font-size: 20px;
+        color: $bottomRightColor;
+        @media only screen and (max-width: 975px){
+          color:#080069;
+        }
+      }//end bottomRight
+    }//end TextHold
+
+    .about,
+    .follow{
+      font-family: $incon;
+      color: white;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      position: absolute;
+      font-size: 22px;
+      //opacity is 0 for animation dont change
+      opacity:0;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }//end contact + follow
+
+    .follow{
+      bottom:30px;
+      left:30px;
+    }
+
+    .about{
+      top:30px;
+      right:30px;
+      color: black;
+    }
+  }//end right
+}//end shell

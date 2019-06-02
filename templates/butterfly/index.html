@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Butterfly</title>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <link type="text/css" rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="scss/main.css">
+    <link rel="shortcut icon" type="image/ico" href="assets/favicon.ico"/>
+    <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro|Montserrat|Quicksand' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="is-loading">
+
+    <div id="preloader">
+      <div class="txt">
+          <p class="txt-perc">0%</p>
+          <div class="progress"><span></span></div>
+      </div>
+    </div>
+
+    <section id="shell" class="preImg">
+      <div class="tint">
+        <div class="panel">
+          <div class="preImg homeImg"></div>
+          <div class="preImg workImg"></div>
+          <div class="preImg aboutImg"></div>
+          <div class="preImg contactImg"></div>
+
+          <div class="homeContent">
+            <div class="centering">
+              <h1 class="name">John Doe</h1>
+              <span class="spacer spacer1"></span>
+              <h2 class="title">Student | Writer | Blogger</h2>
+              <span class="spacer spacer2"></span>
+              <div class=" social">
+                <a href="#" class="icon fa-1x fa fa-instagram" aria-hidden="true"></a>
+                <a href="#" class="icon fa-1x fa fa-snapchat-ghost" aria-hidden="true"></a>
+                <a href="#" class="icon fa-1x fa fa-facebook" aria-hidden="true"></a>
+                <a href="#" class="icon fa-1x fa fa-linkedin" aria-hidden="true"></a>
+                <a href="#" class="icon fa-1x fa fa-twitter" aria-hidden="true"></a>
+              </div>
+            </div>
+            <div class="nav">
+              <button class="about navBtn">About</button>
+              <button class="work navBtn">Work</button>
+              <button class="contact navBtn">Contact</button>
+            </div>
+          </div>
+
+          <div class="aboutContent">
+            <div class="textShell">
+              <h1 class="title">About</h1>
+              <div class="wordHold">
+                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
+                  of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
+                  in this spot, which was created for the bliss of souls like mine.</p>
+                <p> I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil
+                  existence, that I neglect my talents. I should be incapable of drawing a single stroke
+                  at the present moment; and yet I feel that I never was a greater artist than now. </p>
+                <p>When, while the lovely valley teems with vapour around me, and the meridian sun strikes
+                  the upper surface of the impenetrable foliage of my trees, and but a few stray gleams
+                  steal into the inner sanctuary, I throw myself down among the tall grass by the trickling
+                  stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me.</p>
+              </div>
+            </div>
+            <button class="exit aboutExit">back</button>
+          </div>
+
+          <div class="workContent">
+            <div class="textShell">
+              <h1 class="title">Work</h1>
+              <div class="wordHold">
+                <p>A week afterwards Dr. Lanyon took to his bed, and in something less than a fortnight he
+                  was dead. The night after the funeral, at which he had been sadly affected, Utterson locked
+                  the door of his business room, and sitting there by the light of a melancholy candle, drew
+                  out and set before him an envelope addressed by the hand and sealed with the seal of his dead friend.</p>
+                <p>“PRIVATE: for the hands of G. J. Utterson ALONE, and in case of his predecease to be
+                  destroyed unread,” so it was emphatically superscribed; and the lawyer dreaded to behold
+                  the contents. “I have buried one friend to-day,” he thought: “what if this should cost me another?”
+                  And then he condemned the fear as a disloyalty, and broke the seal.</p>
+                <p>Within there was another enclosure, likewise sealed, and marked upon the cover as “not to be opened
+                   till the death or disappearance of Dr. Henry Jekyll.” Utterson could not trust his eyes. Yes, it
+                   was disappearance; here again, as in the mad will which he had long ago restored to its author, here
+                    again were the idea of a disappearance and the name of Henry Jekyll bracketted. </p>
+              </div>
+            </div>
+            <button class="exit workExit">back</button>
+          </div>
+
+          <div class="contactContent">
+            <div class="formHold">
+              <h1 class="title">CONTACT</h1>
+              <!-- Replace the line on 97 with the line on 96 for the contact section to work-->
+              <!-- <form action="<http://formspree.io/youremail@provider.com" method="POST" class="cntr">-->
+              <form action="" method="POST" class="cntr">
+                <input name="contactPageName" type="text" id="name" placeholder="Name"/>
+                <input name="email" type="email" id="email" placeholder="Email"/>
+                <!-- temporary comment,  (This is a honeypot to catch webscrapers) -->
+        				<input type="hidden" name="_next" value="responce.html" />
+                <input type="text" name="_gotcha" style="display:none;" />
+                <label for="message"></label>
+                <textarea class="cntr" id="message" name="message" placeholder="Message" Required></textarea>
+                <button class="cntr" type="submit">Submit</button>
+              </form>
+            </div>
+            <button class="exit contactExit">back</button>
+          </div><!-- end contact -->
+        </div><!-- end panel-->
+        <a href="https://freeWebsite.Design" class="freeWebsiteDesign">freeWebsite.Design</a>
+      </div><!-- end tint-->
+    </section><!-- end shell-->
+  </body>
+  <script type="text/javascript" src="js/jsFiles.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</html>

@@ -1,0 +1,74 @@
+.aboutPage{
+  @media only screen and (max-width: 1000px){
+    .aboutContent{
+      height: auto !important;
+      overflow: hidden !important;
+    }
+
+    img{
+      width: 80% !important;
+      height: auto !important;
+      //border: 5px solid tomato;
+      max-width: none !important;
+    }
+
+    .aboutText{
+      width: 80% !important;
+    }
+  }//end 1000px
+
+  @media only screen and (max-width: 666px){
+    .aboutText{
+      text-align: left !important;
+    }
+  }//end 666px
+
+  .logo{
+    font-size: 50px !important;
+    letter-spacing: 5px !important;
+  }
+
+  .freeWebsiteDesign{
+    bottom:2vw !important;
+    right: 7vw !important;
+    left: auto !important;
+  }
+
+  .aboutContent{
+    height: 100%;
+    width:100%;
+    //border: 5px solid brown;
+    overflow-y: scroll;
+
+    .wrapper{
+      width: auto;
+      text-align: center;
+      padding-top: 10vw;
+      //border: 10px solid yellow;
+
+      img{
+        width: auto;
+        max-width: 50%;
+        height: auto;
+        -webkit-box-shadow: 0px 3px 30px -13px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 3px 30px -13px rgba(0,0,0,0.75);
+        box-shadow: 0px 3px 30px -13px rgba(0,0,0,0.75);
+      }//end img
+
+      .aboutText{
+        width: 50%;
+        height: auto;
+        text-align: justify;
+        display: block;
+        margin: 5vw auto 0 auto;
+        font-size: 25px;
+        font-family: $incon;
+        line-height: 1.2;
+
+        p{
+          margin-bottom: 30px;
+        }
+      }
+    }//end wrapper
+  }//end aboutContent
+}//end aboutPage

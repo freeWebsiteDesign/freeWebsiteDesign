@@ -1,0 +1,538 @@
+/* definings */
+/* global styles */
+* {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.ul {
+  text-align: center; }
+
+.li {
+  display: inline-block; }
+
+html {
+  height: 100%;
+  min-height: 100%; }
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+body {
+  position: relative; }
+
+/*
+*
+*  Project Start
+*
+*/
+.zIndexUp {
+  z-index: 1000000 !important; }
+
+.is-loading {
+  overflow: hidden; }
+
+#preloader.is-hidden {
+  visibility: hidden;
+  opacity: 0; }
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 29999;
+  background-color: transparent; }
+  #preloader .txt {
+    height: 70px;
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    line-height: 1;
+    z-index: 30001; }
+    #preloader .txt .txt-perc {
+      font-family: monospace;
+      color: black;
+      font-size: 30px;
+      padding-bottom: 20px; }
+    #preloader .txt .progress {
+      width: 100%;
+      height: 3px;
+      display: block;
+      margin: 0 auto; }
+      #preloader .txt .progress span {
+        display: block;
+        width: 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); }
+  #preloader .loadPanel {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 10%;
+    z-index: 3000; }
+  #preloader .p1 {
+    left: 0;
+    background-color: #EACFB2; }
+  #preloader .p2 {
+    left: 10%;
+    background-color: #E2C8AC; }
+  #preloader .p3 {
+    left: 20%;
+    background-color: #DBC1A6; }
+  #preloader .p4 {
+    left: 30%;
+    background-color: #D3BBA0; }
+  #preloader .p5 {
+    left: 40%;
+    width: 11% !important;
+    background-color: #CCB59B; }
+  #preloader .p6 {
+    left: 50%;
+    background-color: #C4AE95; }
+  #preloader .p7 {
+    left: 60%;
+    background-color: #BCA78F; }
+  #preloader .p8 {
+    left: 70%;
+    background-color: #B5A089; }
+  #preloader .p9 {
+    left: 80%;
+    background-color: #AD9983; }
+  #preloader .p10 {
+    left: 90%;
+    background-color: #A5927D; }
+
+.menuContent {
+  height: 100vh;
+  width: 100vw;
+  background-color: #cafff3;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200; }
+
+body,
+#shell {
+  background-color: #ffafaf; }
+
+.freeWebsiteDesign {
+  position: fixed;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 15px;
+  z-index: 10;
+  bottom: 3vw;
+  right: 7vw;
+  text-align: left;
+  font-family: "Inconsolata", monospace; }
+  .freeWebsiteDesign:hover a {
+    color: white; }
+  .freeWebsiteDesign a {
+    color: inherit;
+    padding: 5px;
+    color: black; }
+    .freeWebsiteDesign a:visited {
+      color: black; }
+
+#shell {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  min-height: 736px; }
+  @media only screen and (max-width: 500px) {
+    #shell .linksHolder {
+      width: 100% !important;
+      padding: 70px 30px 100px 30px !important; }
+    #shell .brandItem {
+      font-size: 25px !important; } }
+  @media only screen and (max-width: 1000px) {
+    #shell .linksHolder {
+      padding-top: 20%;
+      height: auto !important; }
+      #shell .linksHolder ul {
+        text-align: center !important;
+        text-align-last: center !important; }
+    #shell .freeWebsiteDesign,
+    #shell .linksHolder,
+    #shell .pageNav,
+    #shell .social,
+    #shell .logo {
+      position: relative !important;
+      display: block !important;
+      margin: 0 auto !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      margin: 0 auto !important; }
+    #shell .pageNav,
+    #shell .social,
+    #shell .logo,
+    #shell .freeWebsiteDesign {
+      text-align: center !important; }
+    #shell .pageNav {
+      padding-top: 10% !important; }
+    #shell .freeWebsiteDesign {
+      padding-top: 5% !important;
+      padding-bottom: 30px !important; }
+    #shell .logo,
+    #shell .social {
+      padding-top: 2% !important; } }
+  #shell .logo {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    font-size: 50px;
+    position: absolute;
+    bottom: 7vw;
+    left: 7vw;
+    z-index: 30;
+    font-size: 15vw;
+    font-weight: lighter;
+    line-height: 1;
+    font-family: arial;
+    letter-spacing: 1vw;
+    z-index: 11; }
+    #shell .logo:hover a {
+      color: black !important; }
+    #shell .logo h1 {
+      visibility: hidden; }
+    #shell .logo a {
+      color: #b36b6b;
+      display: block; }
+      #shell .logo a:visited {
+        color: #b36b6b; }
+  #shell .pageNav {
+    position: absolute;
+    top: 7vw;
+    left: 7vw;
+    font-family: "Inconsolata", monospace;
+    font-size: 20px;
+    z-index: 11; }
+    #shell .pageNav a {
+      color: black; }
+      #shell .pageNav a:visited {
+        color: black; }
+      #shell .pageNav a:hover {
+        color: white; }
+  #shell .social {
+    position: absolute;
+    bottom: 7vw;
+    right: 7vw;
+    text-align: right;
+    z-index: 11;
+    font-size: 20px; }
+    #shell .social li {
+      font-family: "Inconsolata", monospace;
+      letter-spacing: 3px;
+      display: block !important; }
+    #shell .social a {
+      color: black; }
+      #shell .social a:visited {
+        color: black; }
+      #shell .social a:hover {
+        cursor: pointer;
+        color: white; }
+  #shell .linksHolder {
+    position: absolute;
+    top: 7vw;
+    right: 7vw;
+    height: 350px;
+    width: 450px;
+    z-index: 20; }
+    #shell .linksHolder ul {
+      text-align: right;
+      text-align-last: left; }
+      #shell .linksHolder ul .brandItem {
+        font-family: "Inconsolata", monospace;
+        font-size: 35px;
+        letter-spacing: 5px; }
+        #shell .linksHolder ul .brandItem a {
+          color: black;
+          padding: 0 10px; }
+  #shell .backgroundImages {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    text-align: center; }
+    #shell .backgroundImages .image {
+      opacity: 0;
+      z-index: 15 !important;
+      width: auto;
+      height: auto;
+      max-height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      max-width: 80vw;
+      -webkit-box-shadow: 0px 3px 34px -13px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 3px 34px -13px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 3px 34px -13px rgba(0, 0, 0, 0.75); }
+
+/*Page Specifics*/
+@media only screen and (max-width: 1000px) {
+  .aboutPage .aboutContent {
+    height: auto !important;
+    overflow: hidden !important; }
+  .aboutPage img {
+    width: 80% !important;
+    height: auto !important;
+    max-width: none !important; }
+  .aboutPage .aboutText {
+    width: 80% !important; } }
+@media only screen and (max-width: 666px) {
+  .aboutPage .aboutText {
+    text-align: left !important; } }
+.aboutPage .logo {
+  font-size: 50px !important;
+  letter-spacing: 5px !important; }
+.aboutPage .freeWebsiteDesign {
+  bottom: 2vw !important;
+  right: 7vw !important;
+  left: auto !important; }
+.aboutPage .aboutContent {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll; }
+  .aboutPage .aboutContent .wrapper {
+    width: auto;
+    text-align: center;
+    padding-top: 10vw; }
+    .aboutPage .aboutContent .wrapper img {
+      width: auto;
+      max-width: 50%;
+      height: auto;
+      -webkit-box-shadow: 0px 3px 30px -13px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 3px 30px -13px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 3px 30px -13px rgba(0, 0, 0, 0.75); }
+    .aboutPage .aboutContent .wrapper .aboutText {
+      width: 50%;
+      height: auto;
+      text-align: justify;
+      display: block;
+      margin: 5vw auto 0 auto;
+      font-size: 25px;
+      font-family: "Inconsolata", monospace;
+      line-height: 1.2; }
+      .aboutPage .aboutContent .wrapper .aboutText p {
+        margin-bottom: 30px; }
+
+@media only screen and (max-width: 1000px) {
+  .contactPage .contactContent {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 80% !important;
+    height: 750px !important; }
+  .contactPage .contactTile,
+  .contactPage form,
+  .contactPage .contactWords {
+    display: block !important; }
+  .contactPage .contactTile {
+    margin: 0 auto !important;
+    padding: 100px 0 50px 0 !important;
+    text-align: center !important;
+    transform: translateX(0) !important;
+    border-bottom: none !important; }
+  .contactPage .contactWords {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important; }
+  .contactPage form {
+    width: 100% !important; }
+  .contactPage button {
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    display: block !important;
+    margin: -3px auto 0 auto !important;
+    position: relative !important; }
+  .contactPage #email {
+    border-right: 3px solid black !important;
+    padding-top: 10px !important; }
+  .contactPage #name,
+  .contactPage #email {
+    padding-bottom: 10px !important; }
+  .contactPage #name,
+  .contactPage #email,
+  .contactPage #message {
+    font-size: 20px !important;
+    text-align: center !important;
+    padding-left: 0 !important; } }
+.contactPage .contactContent {
+  display: block;
+  height: 450px;
+  width: 700px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
+  .contactPage .contactContent .contactTile {
+    display: inline-block;
+    font-family: "Inconsolata", monospace;
+    color: black;
+    font-size: 60px;
+    border-bottom: 3px solid black;
+    padding-right: 15px;
+    margin-bottom: 50px;
+    transform: translateX(5px); }
+  .contactPage .contactContent form {
+    height: 300px;
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 31px;
+    z-index: 100 !important;
+    position: relative; }
+    .contactPage .contactContent form #name,
+    .contactPage .contactContent form #email,
+    .contactPage .contactContent form #message {
+      display: block;
+      width: 100%;
+      background-color: transparent;
+      font-size: 30px;
+      border-bottom: 3px solid black;
+      font-family: "Inconsolata", monospace;
+      padding-top: 20px;
+      padding-left: 20px;
+      border-top: none; }
+    .contactPage .contactContent form #name {
+      border-right: none;
+      border-left: none;
+      margin-top: -16px; }
+    .contactPage .contactContent form #email {
+      border-right: none;
+      border-left: 3px solid black; }
+    .contactPage .contactContent form #message {
+      border-right: 3px solid black;
+      border-left: 3px solid black;
+      height: 200px;
+      line-height: 1; }
+    .contactPage .contactContent form button {
+      padding: 10px 20px;
+      background-color: transparent;
+      position: absolute;
+      bottom: -70px;
+      right: 0;
+      border: 3px solid black;
+      font-family: "Inconsolata", monospace;
+      color: black; }
+      .contactPage .contactContent form button:hover {
+        cursor: pointer; }
+    .contactPage .contactContent form #name:focus,
+    .contactPage .contactContent form #email:focus,
+    .contactPage .contactContent form #message:focus,
+    .contactPage .contactContent form button:focus {
+      outline: 0; }
+    .contactPage .contactContent form ::-webkit-input-placeholder {
+      color: black !important; }
+    .contactPage .contactContent form :-moz-placeholder {
+      color: black !important; }
+    .contactPage .contactContent form ::-moz-placeholder {
+      color: black !important; }
+    .contactPage .contactContent form :-ms-input-placeholder {
+      color: black !important; }
+  .contactPage .contactContent .contactWords {
+    position: absolute;
+    top: 95px;
+    left: 5px;
+    color: #4e0000;
+    font-family: "Inconsolata", monospace;
+    width: 200px;
+    font-size: 20px;
+    text-align: justify; }
+.contactPage .logo {
+  font-size: 50px !important;
+  letter-spacing: 5px !important; }
+.contactPage .freeWebsiteDesign {
+  bottom: 2vw !important;
+  right: 7vw !important;
+  left: auto !important; }
+.contactPage .bigLine {
+  width: 500px;
+  height: 4px;
+  background-color: black;
+  position: absolute;
+  top: 500px;
+  left: 500px; }
+
+.galleryPage {
+  height: auto !important; }
+  @media only screen and (max-width: 1000px) {
+    .galleryPage #shell {
+      text-align: center !important; }
+    .galleryPage .galleryPageTitle {
+      top: 0 !important;
+      right: 0 !important; }
+    .galleryPage .galleryShell {
+      padding: 10vw 0 !important;
+      width: 90% !important; } }
+  .galleryPage .logo {
+    font-size: 50px !important;
+    letter-spacing: 5px !important; }
+  .galleryPage .pageNav,
+  .galleryPage .social,
+  .galleryPage .logo,
+  .galleryPage .freeWebsiteDesign {
+    position: fixed !important; }
+  .galleryPage .galleryPageTitle {
+    position: fixed;
+    top: 7vw;
+    right: 7vw;
+    color: white;
+    font-family: "Inconsolata", monospace;
+    line-height: 1;
+    background-color: black;
+    padding: 10px 20px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    -webkit-box-shadow: 0px 0px 37px -13px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 37px -13px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 37px -13px rgba(0, 0, 0, 0.75); }
+  .galleryPage .galleryShell {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    width: 70%;
+    padding: 2.5vw 0; }
+    .galleryPage .galleryShell img {
+      height: auto;
+      width: auto;
+      max-height: 95vh;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto 5vw auto;
+      -webkit-box-shadow: 0px 3px 37px -16px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 3px 37px -16px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 3px 37px -16px rgba(0, 0, 0, 0.75); }
+
+/*# sourceMappingURL=main.css.map */

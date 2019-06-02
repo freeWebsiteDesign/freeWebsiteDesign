@@ -1,0 +1,67 @@
+.galleryPage{
+  height: auto !important;
+
+  @media only screen and (max-width: 1000px){
+    #shell{
+      text-align: center !important;
+    }
+
+    .galleryPageTitle{
+      top:0 !important;
+      right: 0 !important;
+    }
+
+    .galleryShell{
+      padding: 10vw 0 !important;
+      width: 90% !important;
+    }
+  }//end 1000px
+
+  .logo{
+    font-size: 50px !important;
+    letter-spacing: 5px !important;
+  }//end logo
+
+  .pageNav,
+  .social,
+  .logo,
+  .freeWebsiteDesign{
+    position: fixed !important;
+  }
+
+  .galleryPageTitle{
+    position: fixed;
+    top:7vw;
+    right: 7vw;
+    color: white;
+    font-family: $incon;
+    line-height: 1;
+    background-color: black;
+    padding:10px 20px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    -webkit-box-shadow: 0px 0px 37px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 37px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 37px -13px rgba(0,0,0,0.75);
+  }
+  .galleryShell{
+    display: block;
+    margin: 0 auto;
+    //border: 3px solid black;
+    height: auto;
+    width: 70%;
+    padding: 2.5vw 0;
+
+    img{
+      height: auto;
+      width: auto;
+      max-height: 95vh;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto 5vw auto;
+      -webkit-box-shadow: 0px 3px 37px -16px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 3px 37px -16px rgba(0,0,0,0.75);
+      box-shadow: 0px 3px 37px -16px rgba(0,0,0,0.75);
+    }//end img
+  }//end galleryShell
+}

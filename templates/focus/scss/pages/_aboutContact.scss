@@ -1,0 +1,202 @@
+.aboutContactPage{
+
+  @media only screen and (max-width: 1000px){
+    #shell{
+      height: auto !important;
+    } 
+    .contactLeft,
+    .contactRight{
+      width: 90% !important;
+      position: relative !important;
+      display: block !important;
+
+      top:auto !important;
+    }
+    .name{
+      left: auto !important;
+      top: auto !important;
+      font-size: 20vw !important;
+    }
+
+    .contactLeft{
+      height: 75vw !important;
+      width: 75vw !important;
+      left: auto !important;
+      margin: 50px auto 0 auto;
+
+      -webkit-box-shadow: 0px 0px 39px -15px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 39px -15px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 39px -15px rgba(0,0,0,0.75);
+    }
+
+    .contactRight{
+      right: auto !important;
+      height: auto !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+      padding-top: 12.5% !important;
+
+      .contactText,
+      form{
+        margin: 0 auto !important;
+        width: 75% !important;
+        //border: 1px solid black;
+        padding:0 !important;
+      }
+
+      .contactText{
+        line-height: 1 !important;
+
+        p{
+          text-align: left !important;
+          &:nth-last-child(1){
+            margin-bottom: 12.5% !important;
+          }
+        }
+      }
+
+    }//end contactRight
+
+  }//end 1000px
+
+  #shell{
+
+    .name{
+      position: absolute;
+      top:7vw;
+      left: 7vw;
+      bottom:auto;
+      opacity: 1;
+      font-size: 50px;
+      letter-spacing: 5px;
+      //border: 1px solid black;
+      height: 50px;
+    }//end name
+  }
+
+  .aboutContact,
+  .links,
+  .social{
+    //z-index: 10000000000 !important;
+    opacity: 1 !important;
+  }
+
+  .contactLeft,
+  .contactRight{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top:0;
+  }
+
+  .contactLeft{
+    //border: 2px solid black;
+    left: 0;
+
+    .image{
+      height: 100%;
+      width: 100%;
+      background-image: url("../img/woman.jpg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .contactRight{
+    right: 0;
+    padding: 5% 0;
+    overflow-y:scroll;
+
+    .contactText{
+      display: block;
+      //margin: 0 auto;
+      margin-left: 10%;
+      height: auto;
+      line-height: 1.5;
+      font-family: $incon;
+      color: black;
+      font-size: 25px;
+
+      p{
+        margin-bottom: 30px;
+        text-align: justify;
+        &:nth-last-child(1){
+          margin-bottom: 0;
+        }
+      }
+    }//end contactText
+
+    .contactText,
+    form{
+      display: block;
+      width: 60%;
+      margin-left: 10%;
+    }
+
+    form{
+      //border: 1px solid white;
+      padding-top: 70px;
+      ::-webkit-input-placeholder {
+           color: black !important;
+        }
+
+        :-moz-placeholder { // Firefox 18-
+           color: black !important;
+        }
+
+        ::-moz-placeholder {  // Firefox 19+
+           color: black !important;
+        }
+
+        :-ms-input-placeholder {
+           color: black !important;
+        }
+
+      #name,
+      #email,
+      #message{
+        display: block;
+        margin: 0 auto 30px auto;
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
+        font-family: $incon;
+        border: none;
+        background-color: #ffe3b4;
+      }//end combo
+
+      #name,
+      #email,
+      #message,
+      button{
+        &:focus{
+          outline:0;
+        }
+      }
+
+      #name,
+      #email{
+        padding: 20px 0 20px 0;
+      }
+      #message{
+        padding: 20px;
+        height: 300px;
+      }
+
+      button{
+        padding: 15px 20px;
+        background-color: transparent;
+        font-family: $incon;
+        font-size: 25px;
+        letter-spacing: 7px;
+        text-transform: uppercase;
+        color: #419847;
+        border: none;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }//end form
+  }//end contactRight
+}//end aboutContactPage

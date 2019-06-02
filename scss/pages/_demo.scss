@@ -1,0 +1,264 @@
+#demoPage{
+  background-color: #33738c;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  .center{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .active{
+    &:after{
+      content:'';
+      height: 7px;
+      width: 7px;
+      background-color: #ffd586;
+      position: absolute;
+      top:20px;
+      right: 30px;
+      transform: rotate(45deg);
+    }
+  }
+  .logo{
+    position: absolute;
+    bottom:20px;
+    right: 20px;
+    font-family: $incon;
+    font-size: 20px;
+    background-color: transparent;
+    padding: 10px;
+    //border: 1px solid white;
+    z-index: 10;
+
+    @media only screen and (max-width: 1250px){
+      bottom: auto;
+      top:25px;
+      z-index: 1000;
+      padding: 10px 0 10px 10px;
+    }
+
+    @media only screen and (max-width: 575px){
+      top:18px;
+      font-size: 20px;
+      left: 0;
+      right: 0;
+      width: 200px;
+    }//end 575px
+
+    @media only screen and (max-width: 350px){
+      font-size: 18px;
+    }//end 350px
+
+    a{
+      color: white;
+    }
+  }//end logo
+
+.containerShell{
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  margin: auto;
+  height: 100%;
+  width: calc(100% - 200px);
+  //border: 10px solid white;
+
+  @media only screen and (max-width: 1250px){
+    width: 100%;
+    height: calc(100% - 75px);
+    top: auto;
+  }//end 1250px
+
+  .container{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    //border: 10px solid #878787;
+    border: 20px solid $templatesBlue;
+    z-index: 15;
+    -webkit-box-shadow: 0px 3px 62px -15px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 62px -15px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 62px -15px rgba(0,0,0,0.75);
+
+    @media only screen and (max-width: 1250px){
+      border-top: none;
+      border-left: 20px solid $templatesBlue;
+      border-right: 20px solid $templatesBlue;
+      border-bottom: 20px solid $templatesBlue;
+    }//end 1250px
+
+    @media only screen and (max-width: 600px){
+      border-top: none;
+      border-left: 5px solid $templatesBlue;
+      border-right: 5px solid $templatesBlue;
+      border-bottom: 5px solid $templatesBlue;
+    }//end 600px
+  }//end container
+
+  .rotate{
+    opacity: 0;
+    position: absolute;
+    left:5%;
+    bottom:0;
+    top: 0;
+    margin: auto;
+    font-family: $incon;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 20px;
+    //border: 1px solid white;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    padding: 10px 0;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }//end rotate
+}//end containerShell
+
+  .nav{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 200px;
+    background-color: $templatesBlue;
+    z-index: 15;
+
+    @media only screen and (max-width: 1250px){
+      width: 100%;
+      height: 75px;
+    }//end 1250px
+
+    .title{
+      font-size: 40px;
+      //color: #88c2d4;
+      color: white;
+      display: block;
+      margin: 20px auto 0 auto;
+      text-align: center;
+      font-family: $dosis;
+      letter-spacing: 3px;
+
+      @media only screen and (max-width: 1250px){
+        text-align: left;
+        padding-left: 20px;
+      }//end 1250px
+
+      @media only screen and (max-width: 575px){
+        display: none;
+      }//end 575px
+    }//end title
+
+
+    .download{
+      position: absolute;
+      bottom:25px;
+      left: 50px;
+      font-family: $incon;
+      text-align: center;
+      border-bottom: 2px solid #b4ffb0;
+      font-size: 25px;
+
+      a{
+        color: #b4ffb0;
+        &:visited{
+          color: #b4ffb0;
+        }
+      }
+
+      @media only screen and (max-width: 1250px){
+        display: none;
+      }
+      @media only screen and (max-width: 900px){
+        display: none;
+      }//end 900px
+
+    }//end download
+
+    .displays{
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      margin: auto;
+      width: 100%;
+      height: 170px;
+      //border: 1px solid white;
+      text-align: left;
+      font-size: 25px;
+      font-family: $incon;
+      letter-spacing: 2px;
+      color: #b4eaff;
+
+      @media only screen and (max-width: 1250px){
+        height: 20px;
+        width: 150px;
+        font-size: 20px;
+        text-align: center;
+        top:20px;
+        //border: 2px solid tomato;
+        li{
+          padding: 0 !important;
+        }
+
+        .desktop,
+        .tablet,
+        .mobile{
+          display: none;
+        }
+      }//end 1250px
+
+      @media only screen and (max-width: 575px){
+        //border: 1px solid white;
+        left: auto;
+        right: 0px;
+        top:2px;
+        p{
+          font-size: 20px;
+        }
+      }//end 575px
+
+      @media only screen and (max-width: 350px){
+        p{
+          font-size: 18px;
+        }
+      }//end 350px
+
+      li{
+        position: relative;
+        padding: 10px 0 10px 40px;
+        //border:1px solid white;
+        &:hover{
+          cursor: pointer;
+        }
+      }//end li
+
+      .newTab{
+         font-size:17px;
+         color: #ffe400;
+         z-index: 500;
+
+         &:visited{
+            color: #ffe400;
+         }
+      }
+    }//end displays
+  }//end nav
+}//end DemoPage

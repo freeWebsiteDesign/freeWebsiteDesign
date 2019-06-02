@@ -1,0 +1,330 @@
+/* definings */
+/* global styles */
+* {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+.ul {
+  text-align: center; }
+
+.li {
+  display: inline-block; }
+
+html {
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  position: relative;
+  background-color: black; }
+
+/*
+*
+*  Project Start
+*
+*/
+.is-loading {
+  overflow: hidden; }
+
+#preloader.is-hidden {
+  visibility: hidden;
+  opacity: 0; }
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000000;
+  background-color: #00355f; }
+  #preloader .txt {
+    height: 70px;
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    line-height: 1; }
+    #preloader .txt .txt-perc {
+      font-family: monospace;
+      color: white;
+      font-size: 30px;
+      padding-bottom: 20px; }
+    #preloader .txt .progress {
+      width: 100%;
+      height: 3px;
+      display: block;
+      margin: 0 auto; }
+      #preloader .txt .progress span {
+        display: block;
+        width: 0;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8); }
+
+#shell {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4f90a4;
+  min-height: 500px; }
+  #shell .freeTemplate {
+    z-index: 200;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 17px;
+    font-family: "Inconsolata", monospace;
+    text-align: right;
+    opacity: 0.5; }
+    @media only screen and (max-width: 750px) {
+      #shell .freeTemplate {
+        font-size: 15px; } }
+    #shell .freeTemplate a {
+      color: white; }
+  #shell .social {
+    height: 100%;
+    width: 50%;
+    position: relative;
+    background-color: #33524d;
+    opacity: 0;
+    visibility: hidden; }
+    @media screen and (max-width: 975px) {
+      #shell .social {
+        width: 100%; } }
+    #shell .social .followX {
+      position: absolute;
+      bottom: 10%;
+      right: 0;
+      left: 0;
+      margin: auto;
+      font-size: 30px;
+      font-family: "Open Sans", sans-serif;
+      text-align: center;
+      z-index: 25;
+      color: white; }
+      #shell .social .followX:hover {
+        cursor: pointer; }
+    #shell .social .socialIconHolder {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      height: 380px;
+      width: 300px; }
+      @media only screen and (max-width: 750px) {
+        #shell .social .socialIconHolder {
+          width: 150px;
+          height: 150px; }
+          #shell .social .socialIconHolder .socialIcons {
+            font-size: 40px !important; } }
+      #shell .social .socialIconHolder .socialIcons {
+        padding: 10px;
+        font-size: 80px; }
+      #shell .social .socialIconHolder a {
+        color: white; }
+  #shell .left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 21;
+    width: 50%; }
+    @media screen and (max-width: 975px) {
+      #shell .left {
+        display: none !important; } }
+    #shell .left .leftImg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      z-index: 20;
+      background-image: url("../img/5Compressed.jpg");
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  #shell .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background-color: #E0D2C3;
+    perspective: 1000px;
+    perspective-origin: bottom;
+    background-image: url("../img/mountainsCompressed.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 20; }
+    @media screen and (max-width: 975px) {
+      #shell .right {
+        width: 100% !important; } }
+    #shell .right .aboutX {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      height: 30px;
+      width: 30px;
+      line-height: 1;
+      font-size: 30px;
+      text-align: center;
+      z-index: 25;
+      font-family: "Open Sans", sans-serif; }
+      #shell .right .aboutX:hover {
+        cursor: pointer; }
+    #shell .right .rightImg {
+      display: none;
+      height: 100%;
+      width: 100%;
+      background-image: url("../img/5Compressed.jpg");
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform-origin: center bottom; }
+    #shell .right .aboutMe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 70%;
+      width: 70%;
+      overflow: scroll;
+      opacity: 0;
+      visibility: hidden;
+      padding-top: 30px; }
+      #shell .right .aboutMe .aboutMeTitle {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 60px;
+        font-family: "Forum", Sans;
+        color: #0049a4; }
+        @media only screen and (max-width: 975px) {
+          #shell .right .aboutMe .aboutMeTitle {
+            font-size: 40px; } }
+      #shell .right .aboutMe .aboutMeWords {
+        height: 100%;
+        font-size: 25px;
+        line-height: 1.3;
+        padding-top: 40px;
+        display: block;
+        margin: 0 auto;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        font-family: "Open Sans", sans-serif;
+        color: black; }
+        @media only screen and (max-width: 975px) {
+          #shell .right .aboutMe .aboutMeWords {
+            font-size: 20px;
+            line-height: 1.1; } }
+        #shell .right .aboutMe .aboutMeWords p {
+          padding-bottom: 20px; }
+    #shell .right .rightHolder {
+      transform-origin: center bottom;
+      height: 100%;
+      width: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      @media screen and (max-width: 975px) {
+        #shell .right .rightHolder {
+          background-image: url("../img/5Compressed.jpg"); } }
+      @media screen and (min-width: 976px) {
+        #shell .right .rightHolder {
+          background-image: url("../img/blueGradientCompressed.jpg"); } }
+    #shell .right .textHold {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      height: 200px;
+      width: 300px; }
+      @media only screen and (max-width: 500px) {
+        #shell .right .textHold {
+          width: 200px; }
+          #shell .right .textHold .name {
+            font-size: 50px !important; }
+          #shell .right .textHold .topLeft {
+            top: -30px !important;
+            left: -100px !important; }
+          #shell .right .textHold .bottomRight {
+            bottom: -30px !important;
+            right: -10px !important; } }
+      #shell .right .textHold .name,
+      #shell .right .textHold .topLeft,
+      #shell .right .textHold .bottomRight {
+        opacity: 0; }
+      #shell .right .textHold .name {
+        font-size: 80px;
+        font-family: "Forum", Sans;
+        color: beige; }
+      #shell .right .textHold .topLeft,
+      #shell .right .textHold .bottomRight {
+        position: absolute;
+        font-family: "Open Sans", sans-serif; }
+      #shell .right .textHold .topLeft {
+        top: -30px;
+        left: -120px;
+        transform: rotate(-90deg);
+        font-size: 22px;
+        color: #692a00;
+        letter-spacing: 5px; }
+      #shell .right .textHold .bottomRight {
+        bottom: -80px;
+        right: -20px;
+        width: 15px;
+        word-break: break-all;
+        text-align: center;
+        letter-spacing: -2px;
+        font-size: 20px;
+        color: #b6d7e2; }
+        @media only screen and (max-width: 975px) {
+          #shell .right .textHold .bottomRight {
+            color: #080069; } }
+    #shell .right .about,
+    #shell .right .follow {
+      font-family: "Inconsolata", monospace;
+      color: white;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      position: absolute;
+      font-size: 22px;
+      opacity: 0; }
+      #shell .right .about:hover,
+      #shell .right .follow:hover {
+        cursor: pointer; }
+    #shell .right .follow {
+      bottom: 30px;
+      left: 30px; }
+    #shell .right .about {
+      top: 30px;
+      right: 30px;
+      color: black; }
+
+/*Page Specifics*/
+
+/*# sourceMappingURL=main.css.map */

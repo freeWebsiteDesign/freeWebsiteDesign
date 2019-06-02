@@ -1,0 +1,11 @@
+/* definings */
+@import "_variables.scss";
+@import "_mixins.scss";
+
+/* global styles */
+@import "_globals.scss";
+
+
+/*Page Specifics*/
+@import "pages/_aboutContact.scss";
+@import "pages/_gallery.scss";
